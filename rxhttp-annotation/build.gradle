@@ -1,0 +1,10 @@
+apply plugin: 'java-library'
+apply from: '../maven.gradle'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"
+

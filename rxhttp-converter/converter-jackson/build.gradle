@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+apply from: '../../maven.gradle'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compileOnly project(":rxhttp")
+    compileOnly "com.squareup.okhttp3:okhttp:$okhttp_version"
+    api "com.fasterxml.jackson.core:jackson-core:$jackson_version"
+    api "com.fasterxml.jackson.core:jackson-databind:$jackson_version"
+    api "com.fasterxml.jackson.core:jackson-annotations:$jackson_version"
+}
+
+sourceCompatibility = "8"
+targetCompatibility = "8"

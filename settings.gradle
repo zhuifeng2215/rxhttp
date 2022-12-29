@@ -1,0 +1,19 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+include ':app',
+        ':rxhttp',
+        ':rxhttp-compiler',
+        ':rxhttp-annotation',
+        'rxhttp-converter:converter-fastjson',
+        'rxhttp-converter:converter-jackson',
+        'rxhttp-converter:converter-moshi',
+        'rxhttp-converter:converter-protobuf',
+        'rxhttp-converter:converter-serialization',
+        'rxhttp-converter:converter-simplexml'
