@@ -32,7 +32,7 @@ open class StreamParser<T> constructor(
         val os = expandOutputStream.os
         progressCallback?.let {
             response.writeTo(body, os, it, speed)
-        } ?: body.byteStream().writeTo(os)
+        } ?: body.byteStream().writeToSpeed(speed, os)
         return expand
     }
 }
